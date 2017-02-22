@@ -13,7 +13,10 @@ BOT_NAME = 'tutorial'
 
 SPIDER_MODULES = ['tutorial.spiders']
 NEWSPIDER_MODULE = 'tutorial.spiders'
-
+#载入ImageDownLoadPipeline类
+ITEM_PIPELINES = {'tutorial.pipelines.TutorialPipeline': 1}
+#图片储存
+IMAGES_STORE = r'F:\testresult'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tutorial (+http://www.yourdomain.com)'
